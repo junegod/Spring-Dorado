@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewConfig>
+    <Arguments/>
+    <Context/>
+    <Model>
+        <DataType name="dataType">
+            <PropertyDef name="name">
+                <Property name="dataType">String</Property>
+                <Property name="label">姓名</Property>
+                <Property name="required">true</Property>
+            </PropertyDef>
+            <PropertyDef name="age">
+                <Property name="dataType">int</Property>
+                <Property name="label">年龄</Property>
+            </PropertyDef>
+        </DataType>
+    </Model>
+    <View>
+        <DataSet id="dataSet">
+            <Property name="dataProvider">test#query</Property>
+            <Property name="dataType">[dataType]</Property>
+            <Property name="pageSize">20</Property>
+        </DataSet>
+        <DataGrid>
+            <Property name="dataSet">dataSet</Property>
+            <DataColumn>
+                <Property name="caption">姓名</Property>
+                <Property name="property">name</Property>
+                <Editor/>
+            </DataColumn>
+            <DataColumn>
+                <Property name="caption">年龄</Property>
+                <Property name="property">age</Property>
+                <Editor/>
+            </DataColumn>
+        </DataGrid>
+    </View>
+</ViewConfig>

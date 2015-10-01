@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.springapp</groupId>
+    <artifactId>Spring-Dorado</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Spring-Dorado</name>
+
+    <properties>
+        <spring.version>4.1.1.RELEASE</spring.version>
+        <dorado.version>7.5.0</dorado.version>
+        <servlet.version>3.1.0</servlet.version>
+    </properties>
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-context</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-webmvc</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.bstek.dorado</groupId>
+            <artifactId>dorado-core</artifactId>
+            <version>${dorado.version}</version>
+            <exclusions>
+                <!--<exclusion>-->
+                <!--<artifactId>commons-codec</artifactId>-->
+                <!--<groupId>commons-codec</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>spring-web</artifactId>-->
+                    <!--<groupId>org.springframework</groupId>-->
+                <!--</exclusion>-->
+
+                <!--<exclusion>-->
+                    <!--<artifactId>spring-webmvc</artifactId>-->
+                    <!--<groupId>org.springframework</groupId>-->
+                <!--</exclusion>-->
+
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>spring-dorado</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+    <repositories>
+        <repository>
+            <id>bsdn-maven-repository</id>
+            <url>http://nexus.bsdn.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+</project>
