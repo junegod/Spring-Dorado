@@ -38,8 +38,8 @@ public class DoradoWebApplicationInitializer implements WebApplicationInitialize
         dynamic.addMapping(new String[]{"*.d","*.dpkg","/dorado/*"});
 
         // 初始化WebContext
-        DoradoContext context = DoradoContext.init(servletContext, false);
-        Context.setFailSafeContext(context);
+//        DoradoContext context = DoradoContext.init(servletContext, false);
+//        Context.setFailSafeContext(context);
 
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(AppConfig.class);
