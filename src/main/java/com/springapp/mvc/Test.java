@@ -22,7 +22,7 @@ public class Test {
     public void query(Page<Map<String,Object>> page, Criteria criteria) {
         StringBuilder sb = new StringBuilder();
         Map<String,Object> map = new HashMap<String, Object>();
-        map.put("name","周勇");
+        map.put("name","june");
         map.put("age","20");
         List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
         list.add(map);
