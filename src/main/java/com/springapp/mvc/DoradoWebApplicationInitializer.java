@@ -26,10 +26,10 @@ public class DoradoWebApplicationInitializer implements WebApplicationInitialize
         servletContext.setInitParameter("doradoHome", "classpath:dorado-home");
 
         //使用SpringContextLoaderListener，AnnotationConfigWebApplicationContext和XmlWebApplicationContext没法合并，各自初始化了
-//        servletContext.addListener(new SpringContextLoaderListener());
+        servletContext.addListener(new SpringContextLoaderListener());
 
         //使用DoradoPreloadListener，手动导入dorado的spring xml
-        servletContext.addListener(new DoradoPreloadListener());
+//        servletContext.addListener(new DoradoPreloadListener());
 
         //注册DoradoServlet
         DoradoServlet doradoServlet = new DoradoServlet();

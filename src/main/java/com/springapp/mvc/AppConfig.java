@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 @Configuration
 @ComponentScan(basePackages="com.springapp.mvc")
 @EnableWebMvc
-@ImportResource("classpath:dorado-home/dorado-context.xml")
+//@ImportResource("classpath:dorado-home/dorado-context.xml")
 public class AppConfig {
 
 

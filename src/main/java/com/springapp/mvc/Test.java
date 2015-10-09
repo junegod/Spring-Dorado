@@ -15,7 +15,7 @@ import java.util.Map;
  * @author june
  *         2015年09月30日 13:53
  */
-@Service
+@Service //找不到这个bean
 public class Test {
 
     @DataProvider
